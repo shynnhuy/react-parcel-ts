@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "client": "parcel -p 3000 -o watch public/index.html --out-dir build/debug",
+    "client": "parcel -p 3000 -o watch public/index.html",
     "server": "node-dev -r esm server/index.js",
     "build:client": "parcel build public/index.html --out-dir build/release --public-url ./",
     "start": "concurrently \"yarn run client\" \"yarn run server\""
