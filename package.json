@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "client": "parcel -p 3000 -o watch public/index.html --out-dir build/debug",
+    "server": "node-dev -r esm server/index.js",
+    "build:client": "parcel build public/index.html --out-dir build/release --public-url ./",
+    "start": "concurrently \"yarn run client\" \"yarn run server\""
+  },
+  "dependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "react": "17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3"
+  },
+  "license": "MIT"
+}
